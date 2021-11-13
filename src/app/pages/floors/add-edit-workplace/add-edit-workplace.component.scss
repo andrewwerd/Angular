@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-color: #e4e4e4;
+  border-width: 1px;
+  border-style: solid;
+  margin: 5px;
+}
+.desk-info {
+  border-left-color: #e4e4e4;
+  border-left-width: 1px;
+  border-left-style: solid;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  .mat-button-toggle-group-appearance-standard {
+    border-radius: 20px;
+  }
+  .desk-info-item {
+    padding-bottom: 5px;
+    border-bottom-color: #e4e4e4;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+}
+.desk-container {
+  padding: 10px;
+  .desk {
+    position: relative;
+    .equipment {
+      position: absolute;
+    }
+  }
+}
+
+.top-left {
+  transform: rotate(20deg);
+}
+.top-right {
+  transform: rotate(-20deg);
+}

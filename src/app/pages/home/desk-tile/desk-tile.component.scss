@@ -1,0 +1,36 @@
+.tile {
+  max-width: 300px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-top-color: #6c8258;
+  border-top-width: 3px;
+}
+app-desk {
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.scale {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.tile-info {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.floors-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  height: 176px;
+  transition: all 0.2s ease-in-out;
+}

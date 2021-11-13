@@ -1,0 +1,10 @@
+<mat-card>
+  <div class="user-info">
+    <app-safe-avatar [name]="teamMember!.email | emailAsNameFormat" [size]="35"></app-safe-avatar>
+    <div class="user-info-label">
+      <span class="info-label">{{teamMember!.email | emailAsNameFormat}}</span>
+      <span class="alternative-label">{{teamMember!.email}}</span>
+    </div>
+    <mat-icon class="svgIcon" svgIcon="advanceIcon"></mat-icon>
+  </div>
+</mat-card>

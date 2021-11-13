@@ -1,0 +1,7 @@
+<div class="menu-item" [ngStyle]="{'align-items': description ? 'center' : 'flex-start'}">
+  <fa-icon *ngIf=" displayIcon" [icon]="faIcon!" class="menu-item-icon dark-green-icon"></fa-icon>
+  <div class="menu-item-info">
+    <span class="menu-item-label">{{label}}</span>
+    <span class="menu-item-description" *ngIf="description">{{description}}</span>
+  </div>
+</div>

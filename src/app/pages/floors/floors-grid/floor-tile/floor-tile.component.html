@@ -1,0 +1,12 @@
+<div class="tile grey-border">
+  <div class="tile-info">
+    <h2>Floor {{floor?.number}}</h2>
+    <span>{{floor?.freePlaces}} free places</span>
+  </div>
+  <div style="cursor: pointer">
+    <div class="floors-icon  grey-border" [routerLink]="['/floors']">
+      <fa-icon [icon]="['fas','layer-group']" [size]="'3x'" class="dark-green-icon">
+      </fa-icon>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.desk {
+  position: relative;
+  .equipment {
+    position: absolute;
+  }
+}
+
+.top-left {
+  transform: rotate(20deg);
+}
+.top-right {
+  transform: rotate(-20deg);
+}

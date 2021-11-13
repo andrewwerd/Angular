@@ -1,0 +1,21 @@
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  app-safe-avatar {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .user-info-label {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.profile-menu {
+  width: 220px;
+}
+.profile-menu-button {
+  width: 35px;
+  height: 35px;
+}

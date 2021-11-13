@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="form block-container">
+    <h1>Select booking period</h1>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Booking period</mat-label>
+      <mat-date-range-input [formGroup]="bookingForm!" [rangePicker]="bookingPeriodPicker" [min]="minDate">
+        <input matStartDate placeholder="Start date" formControlName="start">
+        <input matEndDate placeholder="End date" formControlName="end">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="bookingPeriodPicker"></mat-datepicker-toggle>
+      <mat-date-range-picker #bookingPeriodPicker></mat-date-range-picker>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Find</button>
+  </div>
+  <div class="floors-container block-container">
+    <div class="header-container">
+      <h1>Floors</h1>
+      <button mat-button [routerLink]="['/floors/add']">Add</button>
+    </div>
+    <div class="floors">
+      <mat-grid-list cols="4" rowHeight="200px">
+        <mat-grid-tile *ngFor="let floor of floors">
+          <app-floor-tile [floor]="floor"></app-floor-tile>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>

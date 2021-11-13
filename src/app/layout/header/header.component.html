@@ -1,0 +1,12 @@
+<header>
+  <mat-toolbar class="nav-bar">
+    <div class="left-block"></div>
+    <div class="middle-block" [routerLink]="['/home']">
+      <img src="../../../assets/icons/logo.png" alt="logo">
+      <span class="app-name">Workplace Booking</span>
+    </div>
+    <div class="rigth-block">
+      <app-user-profile (openSettings)="openSidebar.emit($event)"></app-user-profile>
+    </div>
+  </mat-toolbar>
+</header>

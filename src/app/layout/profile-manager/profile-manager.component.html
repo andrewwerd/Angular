@@ -1,0 +1,13 @@
+<div class="block-container">
+  <div class="block-top">
+    <h1>{{header}}</h1>
+    <button mat-icon-button class="close-icon" tabindex="-1" (click)="closeManager.emit()">
+      <fa-icon [icon]="['fas', 'times']"></fa-icon>
+    </button>
+  </div>
+  <div class="manager-content" [ngSwitch]="managePage">
+    <app-manage-settings *ngSwitchCase="'settings'"></app-manage-settings>
+    <app-team-members-list *ngSwitchCase="'team'"></app-team-members-list>
+  </div>
+
+</div>

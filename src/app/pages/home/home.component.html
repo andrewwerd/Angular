@@ -1,0 +1,12 @@
+<app-welcome-image></app-welcome-image>
+<div class="container">
+  <div class="message-block">
+    <h1 class="hello-message">Hi Andrei</h1>
+    <h5 class="hint-message">Would you like to check your bookings?</h5>
+  </div>
+  <div class="tiles">
+    <app-desk-tile class="tile" [header]="'Current booking'"></app-desk-tile>
+    <app-desk-tile class="tile" [header]="'Oncoming booking'"></app-desk-tile>
+    <app-desk-tile class="tile" [header]="'Place new booking'" [blankDesk]="true"></app-desk-tile>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  .menu-item-icon {
+    width: 25px;
+  }
+  .menu-item-info {
+    display: flex;
+    flex-direction: column;
+    .menu-item-label {
+      font-size: 14px;
+      height: 15px;
+    }
+    .menu-item-description {
+      font-size: 12px;
+      color: darkgray;
+    }
+  }
+}

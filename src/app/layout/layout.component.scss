@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.header {
+  height: 50px;
+  flex-shrink: 0;
+  background-color: #037cf5;
+}
+
+.side-nav {
+  background-color: #6c8258;
+}
+
+.block-main {
+  height: 100vh;
+}

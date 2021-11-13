@@ -1,0 +1,9 @@
+<div class="image" [style.width.px]="size" [style.height.px]="size">
+  <ng-container *ngIf="false; else elseTemplate">
+    <div class="avatar" [style.width.px]="size" [style.height.px]="size" [style.background-image]="image"></div>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <div class="initials" [style.width.px]="size" [style.height.px]="size" [style.font-size.px]="size/2">
+      {{initials}}</div>
+  </ng-template>
+</div>

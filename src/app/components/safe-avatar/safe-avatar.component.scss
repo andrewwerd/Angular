@@ -1,0 +1,17 @@
+.image {
+  margin: auto;
+  .initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    background-color: #6c8258;
+  }
+
+  .avatar {
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+  }
+}

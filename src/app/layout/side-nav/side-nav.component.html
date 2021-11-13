@@ -1,0 +1,17 @@
+<div class="side-nav-content">
+  <div class="logo-container side-nav-item" [routerLink]="['/home']">
+    <button mat-icon-button disableRipple="true">
+      <img class="logo" src="../../../assets/icons/logo.png" alt="logo">
+    </button>
+  </div>
+  <ng-container *ngFor="let item of navItems">
+    <div class="side-nav-item" [routerLink]="[item.link]">
+      <button mat-button class="button">
+        <div class="button-content">
+          <fa-icon size="2x" [icon]="['fas', item.icon]" style="color:white"></fa-icon>
+          <span>{{item.displayName}}</span>
+        </div>
+      </button>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@import "~@angular/material/theming";
+$custom-typography: mat-typography-config(
+  $font-family: 'SegoeRegular, "Helvetica Neue", sans-serif',
+);
+
+@include angular-material-typography($custom-typography);
+
+$app-palette: (
+  50: #f3f7ed,
+  100: #e0ead2,
+  200: #ccdcb6,
+  300: #b9ce9c,
+  400: #abc488,
+  500: #9eba75,
+  600: #8faa6c,
+  700: #7d9661,
+  800: #6c8258,
+  900: #515f48,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+
+@include mat.core();
+
+$my-primary: mat.define-palette($app-palette, 800);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+    ),
+  )
+);
+
+@include mat.core-theme($my-theme);
+
+@include mat.button-theme($my-theme);
+
+.mat-calendar-body-in-range::before {
+  background: #ccdcb6 !important;
+}
+.mat-calendar-body-selected {
+  background-color: #6c8258 !important;
+}
+.mat-datepicker-toggle-active {
+  color: #6c8258;
+}
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  background-color: #ccdcb6;
+}
+.mat-calendar-body-active {
+  .mat-calendar-body-cell-content {
+    background-color: #ccdcb6;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: SegoeRegular, "Helvetica Neue", sans-serif;
+}
+.page-container {
+  margin: 20px;
+  padding: 20px;
+  height: 100%;
+  background-color: white;
+  border-radius: "12px";
+  box-shadow: "0px 0px 20px rgba(0, 0, 0, 0.05)";
+}
+.block-container {
+  margin: 10px;
+}
+.info-label {
+  font-size: 16px;
+}
+.alternative-label {
+  font-size: 14px;
+  color: darkgray;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.full-width {
+  width: 100%;
+}
+.grey-border {
+  border-color: #e4e4e4;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+}
+.dark-green-icon {
+  color: #6c8258;
+}

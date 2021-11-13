@@ -1,0 +1,18 @@
+<div class="tile grey-border">
+  <div class="tile-info">
+    <h2>{{header}}</h2>
+    <span *ngIf="!blankDesk">{{startDate | date:'mediumDate'}} - {{endDate | date:'mediumDate'}}</span>
+  </div>
+  <div class="scale" style="cursor: pointer">
+    <ng-container *ngIf="blankDesk; else desk">
+      <div class="floors-icon  grey-border" [routerLink]="['/floors']">
+        <fa-icon [icon]="['fas','layer-group']" [size]="'4x'" class="dark-green-icon">
+        </fa-icon>
+      </div>
+    </ng-container>
+    <ng-template #desk>
+      <app-desk class="grey-border" [size]="250">
+      </app-desk>
+    </ng-template>
+  </div>
+</div>

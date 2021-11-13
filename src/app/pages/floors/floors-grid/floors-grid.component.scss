@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.block-container {
+  padding: 20px;
+  height: 100%;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+}
+.submit {
+  color: white;
+  background-color: #6c8258;
+}
+.header-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+app-floor-tile {
+  width: 100px;
+}

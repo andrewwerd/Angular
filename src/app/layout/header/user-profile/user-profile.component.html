@@ -1,0 +1,27 @@
+<button class="profile-menu-button" mat-icon-button [matMenuTriggerFor]="profileMenu" >
+  <app-safe-avatar [name]="email | emailAsNameFormat" [size]="35"></app-safe-avatar>
+</button>
+<mat-menu #profileMenu="matMenu" class="profile-menu">
+  <div class="user-info">
+    <app-safe-avatar [name]="email | emailAsNameFormat" [size]="35"></app-safe-avatar>
+    <div class="user-info-label">
+      <span class="info-label">{{email | emailAsNameFormat}}</span>
+      <span class="alternative-label">{{email}}</span>
+    </div>
+  </div>
+  <button mat-menu-item [routerLink]="['/review-booking']">
+    <app-menu-item label="My bookings" description='Display your booking history.' iconName="clipboard-check">
+    </app-menu-item>
+  </button>
+  <button mat-menu-item (click)="openSettings.emit('team')">
+    <app-menu-item label="My team" description='Manage your team member list.' iconName="user-friends">
+    </app-menu-item>
+  </button>
+  <button mat-menu-item (click)="openSettings.emit('settings')">
+    <app-menu-item label="Settings" description='Manage your privacy and profile settings.' iconName="cog">
+    </app-menu-item>
+  </button>
+  <button mat-menu-item>
+    <app-menu-item label="Logout" iconName="sign-out-alt"></app-menu-item>
+  </button>
+</mat-menu>

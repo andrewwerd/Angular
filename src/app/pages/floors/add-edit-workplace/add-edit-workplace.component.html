@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="desk-container">
+    <app-desk [selectedSettings]="selectedSettings" [size]="475"></app-desk>
+  </div>
+  <div class="desk-info">
+    <div class="desk-type desk-info-item">
+      <mat-button-toggle-group name="deskEquipmentType" (change)="onToggle($event)">
+        <mat-button-toggle value="desktop">Desktop</mat-button-toggle>
+        <mat-button-toggle value="laptop">Laptop</mat-button-toggle>
+        <mat-button-toggle checked value="nothing">Nothing</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div class="desk-info-item">
+
+    </div>
+    <div class="desk-info-item"></div>
+  </div>
+</div>

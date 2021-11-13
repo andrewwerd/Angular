@@ -1,0 +1,34 @@
+<div class="block-container flex-column">
+  <span class="alternative-label">
+    You can search for new colleague and send requests to join your team, or see your dear old team members.
+  </span>
+  <app-search-input [label]="'Search friends'" [placeholder]="'Enter friend name'" [control]="searchControl">
+  </app-search-input>
+  <ng-container *ngIf="searchIsActive">
+    <ng-container *ngIf="employeeList && employeeList.length > 0; else employeeListEmptyTemplate">
+      <div *ngFor="let employee of employeeList">
+        <app-team-member-card [teamMember]="employee"></app-team-member-card>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <h2>
+    My Team
+  </h2>
+  <ng-container *ngIf="teamMembersList && teamMembersList.length > 0; else teamMembersListEmptyTemplate">
+    <div *ngFor="let teamMember of teamMembersList">
+      <app-team-member-card [teamMember]="teamMember"></app-team-member-card>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #employeeListEmptyTemplate>
+  <span class="alternative-label">
+    Employee not found.
+  </span>
+</ng-template>
+<ng-template #teamMembersListEmptyTemplate>
+  <span class="alternative-label">
+    Your team is empty. Hurry to fix it!
+  </span>
+</ng-template>

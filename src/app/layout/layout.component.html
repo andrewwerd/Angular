@@ -1,0 +1,19 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side" class="side-nav">
+    <app-side-nav></app-side-nav>
+  </mat-sidenav>
+  <mat-sidenav #sidenav mode="over" position='end'>
+    <app-profile-manager #manager (closeManager)="sidenav.toggle()" [managePage]='managePage'></app-profile-manager>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="overflow: hidden;" autosize fullscreen>
+    <div class="container">
+      <app-header (openSidebar)="openSidenav($event)"></app-header>
+      <ng-scrollbar class="scrollable block-main" id="main-scrollbar">
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </ng-scrollbar>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

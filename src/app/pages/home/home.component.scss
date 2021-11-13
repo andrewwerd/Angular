@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .message-block {
+    margin: 50px;
+    color: #6c8258;
+    .hello-message {
+      font-size: 40px;
+      margin-bottom: 50px;
+    }
+    .hint-message {
+      font-size: 25px;
+    }
+  }
+  .tiles {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .tile {
+      width: 30%;
+    }
+  }
+}
