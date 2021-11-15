@@ -1,0 +1,10 @@
+<div class="block-container">
+  <div class="designer-body" id="designer">
+    <div class="floor-plan">
+      <app-rooms [rooms]="rooms"></app-rooms>
+    </div>
+  </div>
+  <div class="right-toolbar">
+    <app-editor-toolbar (modeSelected)="selectedMode=$event"></app-editor-toolbar>
+  </div>
+</div>

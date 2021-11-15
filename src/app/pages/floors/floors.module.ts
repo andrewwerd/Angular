@@ -4,7 +4,6 @@ import { AddEditWorkplaceComponent } from './add-edit-workplace/add-edit-workpla
 import { FloorsComponent } from './floors.component';
 import { DeskModule } from 'app/components/desk/desk.module';
 import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FloorTileComponent } from './floors-grid/floor-tile/floor-tile.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -14,8 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatGridListModule } from '@angular/material/grid-list'
 import { FloorsGridComponent } from './floors-grid/floors-grid.component';
 import { FloorsRoutingModule } from './floors-routing.module';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { FloorsAddComponent } from './floors-add/floors-add.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -23,10 +21,8 @@ import { FloorsAddComponent } from './floors-add/floors-add.component';
     FloorsComponent,
     FloorTileComponent,
     FloorsGridComponent,
-    FloorsAddComponent
   ],
   imports: [
-    DragDropModule,
     CommonModule,
     DeskModule,
     MatButtonModule,

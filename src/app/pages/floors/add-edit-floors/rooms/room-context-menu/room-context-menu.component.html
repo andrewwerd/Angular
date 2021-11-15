@@ -1,0 +1,17 @@
+<mat-card style="display: flex; flex-direction: column;">
+  <span>Borders</span>
+  <mat-button-toggle-group name="borders" multiple (valueChange)="onBorderSelected($event)" [value]="borders">
+    <mat-button-toggle value="top">
+      <mat-icon>border_top</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="right">
+      <mat-icon>border_right</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="bottom">
+      <mat-icon>border_bottom</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="left">
+      <mat-icon>border_left</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-card>

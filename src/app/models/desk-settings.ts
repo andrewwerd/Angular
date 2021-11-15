@@ -13,10 +13,9 @@ export interface EquipmentInfo {
 export interface Equipment {
   type: EquipmentType
   horizontalPosition: 'left' | 'center' | 'right'
-  verticalPosition: 'top' | 'center' | 'bottom'
-  className: string
+  verticalPosition: 'top' | 'middle' | 'bottom'
+  className: 'laptop' | 'monitor' | 'keyboard' | 'mouse'
   imageSrc: string
-  width: number
 }
 
 export enum EquipmentType {

@@ -22,40 +22,35 @@ export class AddEditWorkplaceComponent {
         horizontalPosition: 'left',
         verticalPosition: 'top',
         className: 'monitor',
-        imageSrc: '../../../assets/desk-icons/monitor.png',
-        width: this.size / 3
+        imageSrc: '../../../assets/desk-icons/monitor.png'
       },
       {
         type: EquipmentType.monitor,
         horizontalPosition: 'right',
         verticalPosition: 'top',
         className: 'monitor',
-        imageSrc: '../../../assets/desk-icons/monitor.png',
-        width: this.size / 3
+        imageSrc: '../../../assets/desk-icons/monitor.png'
       },
       {
         type: EquipmentType.monitor,
         horizontalPosition: 'center',
         verticalPosition: 'top',
         className: 'monitor',
-        imageSrc: '../../../assets/desk-icons/monitor.png',
-        width: this.size / 3
+        imageSrc: '../../../assets/desk-icons/monitor.png'
       },
       {
         type: EquipmentType.keyboard,
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
         className: 'keyboard',
-        imageSrc: '../../../assets/desk-icons/keyboard.png',
-        width: this.size / 3
+        imageSrc: '../../../assets/desk-icons/keyboard.png'
       },
       {
         type: EquipmentType.mouse,
         horizontalPosition: 'left',
-        verticalPosition: 'center',
+        verticalPosition: 'middle',
         className: 'mouse',
-        imageSrc: '../../../assets/desk-icons/mouse.png',
-        width: this.size / 28
+        imageSrc: '../../../assets/desk-icons/mouse.png'
       }]
   };
   laptopSettings: DeskSettings = {
@@ -70,41 +65,36 @@ export class AddEditWorkplaceComponent {
         type: EquipmentType.laptop,
         horizontalPosition: 'center',
         verticalPosition: 'top',
-        className: '',
-        imageSrc: '../../../assets/desk-icons/laptop.png',
-        width: this.size / 5
+        className: 'laptop',
+        imageSrc: '../../../assets/desk-icons/laptop.png'
       },
       {
         type: EquipmentType.monitor,
         horizontalPosition: 'left',
         verticalPosition: 'top',
         className: 'monitor',
-        imageSrc: '../../../assets/desk-icons/monitor.png',
-        width: this.size / 3
+        imageSrc: '../../../assets/desk-icons/monitor.png'
       },
       {
         type: EquipmentType.monitor,
         horizontalPosition: 'right',
         verticalPosition: 'top',
         className: 'monitor',
-        imageSrc: '../../../assets/desk-icons/monitor.png',
-        width: this.size / 3
+        imageSrc: '../../../assets/desk-icons/monitor.png'
       },
       {
         type: EquipmentType.keyboard,
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
         className: 'keyboard',
-        imageSrc: '../../../assets/desk-icons/keyboard.png',
-        width: this.size / 3
+        imageSrc: '../../../assets/desk-icons/keyboard.png'
       },
       {
         type: EquipmentType.mouse,
         horizontalPosition: 'left',
-        verticalPosition: 'center',
+        verticalPosition: 'middle',
         className: 'mouse',
-        imageSrc: '../../../assets/desk-icons/mouse.png',
-        width: this.size / 28
+        imageSrc: '../../../assets/desk-icons/mouse.png'
       }
     ]
   }

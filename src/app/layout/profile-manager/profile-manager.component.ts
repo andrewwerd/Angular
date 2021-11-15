@@ -20,5 +20,5 @@ export class ProfileManagerComponent implements OnInit {
     return `Manage ${StringUtils.capitalize(this.managePage!)}`;
   }
 
-  ngOnInit(): void {console.log('init') }
+  ngOnInit(): void {}
 }

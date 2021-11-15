@@ -1,0 +1,13 @@
+<div class="actions">
+  <mat-button-toggle-group name="mode" value="select" (valueChange)="modeSelected.emit($event)">
+    <mat-button-toggle value="select">
+      <fa-icon [icon]="['fas','mouse-pointer']"></fa-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="move">
+      <fa-icon [icon]="['fas','arrows-alt']"></fa-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<mat-divider></mat-divider>
+<button mat-button>Rooms</button>
+<button mat-button>Desks</button>

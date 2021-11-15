@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,6 +14,7 @@
     }
     .hint-message {
       font-size: 25px;
+      line-height: 30px;
     }
   }
   .tiles {

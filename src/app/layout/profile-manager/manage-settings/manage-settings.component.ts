@@ -30,7 +30,7 @@ export class ManageSettingsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { console.log('settings') }
+  ngOnInit(): void { }
 
   getPrivacySettingValues(setting: PrivacySetting): string[] {
     return setting.values.map(value => StringUtils.capitalize(value));

@@ -20,7 +20,6 @@ export class TeamMembersListComponent implements OnInit {
     private onDestroy$: NgOnDestroy) { }
 
   ngOnInit(): void {
-    console.log('teams')
     this.resetSearch();
     this.searchControl.valueChanges
       .pipe(

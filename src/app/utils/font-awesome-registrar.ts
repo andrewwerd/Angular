@@ -3,7 +3,7 @@ import {
   faCheckSquare, faTimes, faSignOutAlt,
   faClipboardCheck, faCog, faUserFriends,
   faSearch, faMapMarkerAlt, faHome,
-  faCalendarDay, faPlus, faLayerGroup
+  faCalendarDay, faPlus, faLayerGroup, faMousePointer, faArrowsAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 export class FontAwesomeRegistrar {
@@ -20,6 +20,8 @@ export class FontAwesomeRegistrar {
       faCalendarDay,
       faPlus,
       faHome,
-      faLayerGroup);
+      faLayerGroup,
+      faMousePointer,
+      faArrowsAlt);
   }
 }

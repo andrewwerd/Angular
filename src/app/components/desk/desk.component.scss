@@ -3,11 +3,48 @@
   .equipment {
     position: absolute;
   }
+  .top {
+    top: calc(20% - var(--offset) / 2);
+  }
+  .middle {
+    top: calc(45% - var(--offset) / 2);
+  }
+  .bottom {
+    top: calc(60% - var(--offset) / 2);
+  }
+  .left {
+    left: calc(80% - var(--offset) / 2);
+  }
+  .center {
+    left: calc(50% - var(--offset) / 2);
+  }
+  .right {
+    left: calc(20% - var(--offset) / 2);
+  }
+  .top-left {
+    transform: rotate(20deg);
+  }
+  .top-right {
+    transform: rotate(-20deg);
+  }
 }
 
-.top-left {
-  transform: rotate(20deg);
+.laptop {
+  width: calc(100% / 5);
+  --offset: calc(100% / 5);
 }
-.top-right {
-  transform: rotate(-20deg);
+
+.monitor {
+  width: calc(100% / 3);
+  --offset: calc(100% / 3);
+}
+
+.keyboard {
+  width: calc(100% / 3);
+  --offset: calc(100% / 3);
+}
+
+.mouse {
+  width: calc(100% / 28);
+  --offset: calc(100% / 30);
 }

@@ -69,6 +69,13 @@ $my-theme: mat.define-light-theme(
   }
 }
 
+.mat-button-toggle-label-content {
+  line-height: unset !important;
+}
+.mat-button-toggle-checked {
+  background-color: #8faa6c !important;
+  color: white !important;
+}
 html,
 body {
   height: 100%;

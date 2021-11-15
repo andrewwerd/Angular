@@ -1,8 +1,8 @@
 <div class="desk">
-  <img src="../../../assets/desk-icons/desk.png" [style.width.px]="size" alt="desk">
+  <img style="width: 100%" src="../../../assets/desk-icons/desk.png" alt="desk">
   <ng-container *ngFor="let equipment of selectedSettings?.equipment">
-    <img class="{{equipment.className}} {{equipment.verticalPosition}}-{{equipment.horizontalPosition}} equipment"
-      [src]="equipment.imageSrc" [alt]="equipment.type" [style.top]="getTopOffset(equipment)"
-      [style.left]="getLeftOffset(equipment)" [style.width.px]="equipment.width">
+    <img
+      class="{{equipment.className}} {{equipment.verticalPosition}} {{equipment.horizontalPosition}} {{equipment.verticalPosition}}-{{equipment.horizontalPosition}} equipment"
+      [src]="equipment.imageSrc" [alt]="equipment.type">
   </ng-container>
 </div>

@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { FloorsComponent } from './floors.component';
 import { FloorsGridComponent } from './floors-grid/floors-grid.component';
-import { FloorsAddComponent } from './floors-add/floors-add.component';
+import { AddEditFloorsComponent } from './add-edit-floors/add-edit-floors.component';
 
 const routes: Routes = [
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
       },
       {
         path: 'add',
-        component: FloorsAddComponent
+        loadChildren: () => import('./add-edit-floors/add-edit-floors.module').then(m => m.AddEditFloorsModule)
       },
       // {
       //   path: ':id',
