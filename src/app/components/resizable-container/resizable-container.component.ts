@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ResizeEvent } from 'angular-resizable-element';
 
 @Component({
@@ -6,7 +6,7 @@ import { ResizeEvent } from 'angular-resizable-element';
   templateUrl: './resizable-container.component.html',
   styleUrls: ['./resizable-container.component.scss']
 })
-export class ResizableContainerComponent implements OnInit {
+export class ResizableContainerComponent implements OnInit, OnChanges {
 
 
   @Input()
@@ -28,6 +28,9 @@ export class ResizableContainerComponent implements OnInit {
   public style: { [klass: string]: any } = {};
 
   constructor() { }
+  ngOnChanges(changes: SimpleChanges): void {
+    this.refreshBorders();
+  }
   ngOnInit(): void {
     this.style = {
       width: `${this.width}px`,
@@ -35,6 +38,16 @@ export class ResizableContainerComponent implements OnInit {
       top: `${this.top}px`,
       left: `${this.left}px`,
     };
+    this.refreshBorders();
+    if (this.index) this.style[`z-index`] = this.index;
+  }
+
+
+  validate(event: ResizeEvent): boolean {
+    return event.rectangle.top >= 0 && event.rectangle.left >= 0;
+  }
+
+  refreshBorders() {
     this.style[`border-left-width`] = '0px';
     this.style[`border-right-width`] = '0px';
     this.style[`border-top-width`] = '0px';
@@ -44,12 +57,6 @@ export class ResizableContainerComponent implements OnInit {
     this.borders?.forEach(border => {
       this.style[`border-${border}-width`] = '3px';
     });
-    if (this.index) this.style[`z-index`] = this.index;
-  }
-
-
-  validate(event: ResizeEvent): boolean {
-    return event.rectangle.top >= 0 && event.rectangle.left >= 0;
   }
 
   onResizeEnd(event: ResizeEvent): void {
@@ -57,8 +64,8 @@ export class ResizableContainerComponent implements OnInit {
       ...this.style,
       left: `${event.rectangle.left}px`,
       top: `${event.rectangle.top}px`,
-      width: `${event.rectangle.width}px`,
-      height: `${event.rectangle.height}px`
+      width: event.edges.right || event.edges.left ? `${event.rectangle.width}px` : this.style.width,
+      height: event.edges.bottom || event.edges.top ? `${event.rectangle.height}px` : this.style.height
     };
   }
 }

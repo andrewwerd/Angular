@@ -11,7 +11,8 @@ export class RoomsComponent implements OnInit {
 
   @Input()
   rooms: Room[] = [];
-
+  @Input()
+  disableResize: boolean = false;
 
   isDisplayContextMenu: boolean = false;
   rightClickMenuPositionX: any | undefined;
@@ -44,8 +45,9 @@ export class RoomsComponent implements OnInit {
   onRightClick(event: any, room: Room) {
     this.isDisplayContextMenu = true;
     this.selectedRoomId = room.id;
-    this.rightClickMenuPositionX = event.clientX;
-    this.rightClickMenuPositionY = event.clientY;
+    console.log(event)
+    this.rightClickMenuPositionX = event.layerX - room.left;
+    this.rightClickMenuPositionY = event.layerY - room.top;
   }
 
   getRightClickMenuStyle() {

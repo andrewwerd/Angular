@@ -1,6 +1,6 @@
 <ng-container *ngFor="let room of rooms">
   <app-resizable-container [width]="150" [height]="100" (contextmenu)="onRightClick($event, room); false"
-    [borders]="room.borders">
+    [borders]="room.borders.sort()" [disabled]="disableResize">
   </app-resizable-container>
 </ng-container>
 <div *ngIf="isDisplayContextMenu" [ngStyle]="getRightClickMenuStyle()" #contextMenu>

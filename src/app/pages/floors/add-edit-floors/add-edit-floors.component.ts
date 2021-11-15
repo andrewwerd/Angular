@@ -9,7 +9,8 @@ import { Room } from './rooms/rooms.component';
 })
 export class AddEditFloorsComponent implements OnInit {
 
-  selectedMode: 'move' | 'select' = 'select';
+  selectedMode: 'floor' | 'room' | 'desk' = 'floor';
+  selectedAction: 'move' | 'select' | 'resize' = 'select';
   wallsMode: boolean = false;
 
 
@@ -26,7 +27,11 @@ export class AddEditFloorsComponent implements OnInit {
   }
 
   get isMoveModeSelected() {
-    return this.selectedMode === 'move';
+    return this.selectedAction === 'move';
+  }
+
+  get isFloorMoveActive() {
+    return this.selectedMode === 'floor' && this.selectedAction === 'move'
   }
 
   ngOnInit(): void { }
@@ -35,8 +40,15 @@ export class AddEditFloorsComponent implements OnInit {
     return { x: Math.floor(point.x / 10) * 10, y: Math.floor(point.y / 10) * 10 }; // will render the element every 30 pixels horizontally
   }
 
+  refreshFloorPosition(event: any) {
+    this.rooms.forEach(room => {
+      room.top += event.distance.y;
+      room.left += event.distance.x;
+    });
+  }
+
   toggleWallsMode() {
     this.wallsMode = true;
-    this.selectedMode = "select";
+    this.selectedAction = "select";
   }
 }

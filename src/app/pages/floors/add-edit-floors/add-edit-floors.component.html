@@ -1,10 +1,12 @@
 <div class="block-container">
   <div class="designer-body" id="designer">
-    <div class="floor-plan">
-      <app-rooms [rooms]="rooms"></app-rooms>
+    <div class="floor-plan" cdkDrag cdkDragBoundary=".designer-body" [cdkDragDisabled]="!isFloorMoveActive"
+      (cdkDragEnded)="refreshFloorPosition($event)">
+      <app-rooms [rooms]="rooms" [disableResize]="selectedAction !== 'resize'"></app-rooms>
     </div>
   </div>
   <div class="right-toolbar">
-    <app-editor-toolbar (modeSelected)="selectedMode=$event"></app-editor-toolbar>
+    <app-editor-toolbar (modeSelected)="selectedMode=$event" (actionSelected)="selectedAction=$event">
+    </app-editor-toolbar>
   </div>
 </div>

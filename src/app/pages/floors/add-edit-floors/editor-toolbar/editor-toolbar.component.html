@@ -1,13 +1,14 @@
+<span>{{entityHeader}}</span>
 <div class="actions">
-  <mat-button-toggle-group name="mode" value="select" (valueChange)="modeSelected.emit($event)">
-    <mat-button-toggle value="select">
-      <fa-icon [icon]="['fas','mouse-pointer']"></fa-icon>
-    </mat-button-toggle>
-    <mat-button-toggle value="move">
-      <fa-icon [icon]="['fas','arrows-alt']"></fa-icon>
-    </mat-button-toggle>
+  <mat-button-toggle-group name="mode" value="select" (valueChange)="actionSelected.emit($event)">
+    <ng-container *ngFor="let action of selectedOptionActions">
+      <mat-button-toggle [value]="action.type">
+        <fa-icon [icon]="['fas', action.icon ]"></fa-icon>
+      </mat-button-toggle>
+    </ng-container>
   </mat-button-toggle-group>
 </div>
 <mat-divider></mat-divider>
-<button mat-button>Rooms</button>
-<button mat-button>Desks</button>
+<button mat-button (click)="setEntity('floor')">Floor</button>
+<button mat-button (click)="setEntity('room')">Rooms</button>
+<button mat-button (click)="setEntity('desk')">Desks</button>
